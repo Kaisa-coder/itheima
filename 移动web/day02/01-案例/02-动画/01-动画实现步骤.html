@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画实现步骤</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* 使用动画 */
+            animation: change 1s;
+        }
+
+        /* 一. 定义动画：从200变大到600 */
+        /* @keyframes change {
+            from {
+                width: 200px;
+            }
+
+            to {
+                width: 600px;
+            }
+        } */
+
+
+        /* 二. 定义动画：200 到 500*300 到 800*500 */
+        /* 百分比指的是动画总时长的占比 */
+        @keyframes change {
+            0%{
+                width: 200px;
+            }
+            50%{
+                width: 500px;
+                height: 300px;
+            }
+            100% {
+                width: 800px;
+                height: 500px; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--  
+        动画
+            目标:使用animation添加动画效果
+            思考:过渡可以实现什么效果？
+            答:实现2个状态间的变化过程
+            动画效果:实现多个状态间的变化过程，动画过程可控(重复播放、最终画面、是否暂停)
+            动画的本质是快速切换大量图片时在人脑中形成的额具体连续性的画面
+            构成动画的额最小单元；帧或动画帧
+        动画的实现步骤
+            目标:使用animation添加动画效果
+            实现步骤:
+                1、定义动画
+                    方法一
+                        @keyframes 动画名称 {
+                            from{}
+                            to}{}
+                        }
+                    方法二
+                        @keyframes 动画名称 {
+                            0%{}
+                            10%{}
+                            15%{}
+                            100%{}
+                        }
+                2、使用动画
+                        animation:动画名称 动画花费时长;
+    -->
+    <div class="box"></div>
+</body>
+
+</html>

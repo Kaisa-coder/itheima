@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转效果</title>
+    <style>
+        img {
+            width: 250px;
+            /* 旋转必须加过渡效果 否则有时候看不出来 */
+            transition: all 2s;
+        }
+        img:hover {
+            /* 顺时针 */
+            transform: rotate(360deg);
+            /* 逆时针 */
+            /* transform: rotate(-360deg); */
+        }
+    </style>
+</head>
+<body>
+    <!--  
+        旋转：
+            目标：使用rotate实现元素旋转效果
+            语法：
+                transform：rotate(角度);
+                注意：角度单位是deg
+            技巧：取值正负均可
+                取值为正，则顺时针旋转
+                取值为负，则逆时针旋转
+    -->
+    <img src="./images/rotate.png" alt="">
+</body>
+</html>

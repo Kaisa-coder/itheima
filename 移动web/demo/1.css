@@ -1,0 +1,51 @@
+body {
+    background-color: #f7f7f8;
+}
+
+.red {
+    color: #cf4444;
+}
+.pannel {
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.main {
+    padding: 12px 11px 80px;
+}
+
+.pay {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 0 11px;
+    /* background-color: pink; */
+    border-top: 1px solid #ededed;
+}
+
+.pay .left {
+    font-size: 12px;
+}
+
+.pay .left i {
+    font-size: 20px;
+}
+
+.pay .right a {
+    display: block;
+    width: 90px;
+    height: 35px;
+    background-image: linear-gradient(90deg,
+            #6fc2aa 5%,
+            #54b196 100%);
+    border-radius: 3px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 13px;
+    color: #fff;
+}

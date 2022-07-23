@@ -1,0 +1,18 @@
+// Less语法
+// 目标:使用Less运算写法完成px单位到rem单位的转换
+// 思考:在px单位转换到rem单位过程中,哪项工作是最麻烦的?
+// 答:除法运算。CSS不支持计算写法。
+// 解决方案:可以通过Less实现
+// Less
+// 目标:使用Less语法快速编译生成CSS代码
+// Less是一个CSS预处理器,Less文件后缀是.less
+// 扩充了CSS语言,使CSS具备一定的逻辑性、计算能力
+// 注意:浏览器不识别Less代码,目前阶段,网页要引入对应的CSS文件
+.father {
+    color: red;
+    width: (68 / 37.5rem);
+
+    .son {
+        background-color: pink;
+    }
+}

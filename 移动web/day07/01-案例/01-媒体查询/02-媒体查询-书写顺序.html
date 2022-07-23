@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            视口宽度 >= 768px，网页背景色是 粉色
+            视口宽度 >= 992px，网页背景色是 绿色
+            视口宽度 >= 1200px，网页背景色是 skyblue
+         */
+        /* css属性都有层叠性 */
+        /* @media (min-width:1200px) {
+            body {
+                background-color: skyblue;
+            }
+        } */
+
+        @media(min-width:768px) {
+            body {
+                background-color: pink;
+            }
+        }
+
+        @media(min-width:992px) {
+            body {
+                background-color: green;
+            }
+        }
+
+        @media (min-width:1200px) {
+            body {
+                background-color: skyblue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--  
+        min-width(从小到大)
+        max-width(从大到小)
+        完整写法:
+        @media 关键词 媒体类型 and (媒体特性) { CSS代码 }
+        关键词:
+        and (两个条件)
+        only (一个条件)
+        not
+        媒体类型:
+            媒体是用来区分设备类型的,如屏幕设备、打印设备等,其中手机、电脑、平板都属于屏幕设备
+            类型名称    值          描述
+            屏幕        screen      带屏幕的设备
+            打印预览    print       打印预览模式
+            阅读器      speech      屏幕阅读模式
+            不区分类型  all         默认值,包括以上3种情形
+        媒体特性:
+            主要是用来描述媒体类型的具体特征,如当前屏幕的宽高、分辨率、横屏或竖屏等。
+            特性名称            属性                        值
+            视口的宽和高        width、height               数值
+            视口最大宽和高      max-width、max-height       数值
+            视口最小宽和高      min-width、min-height       数值
+            屏幕方向            orientation                 portrait:竖屏 landscape:横屏
+    -->
+</body>
+
+</html>

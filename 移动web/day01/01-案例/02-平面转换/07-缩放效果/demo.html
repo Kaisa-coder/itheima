@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缩放效果</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 210px;
+            margin: 100px auto;
+            background-color: pink;
+        }
+        .box img {
+            width: 100%;
+            translate: all .5s;
+        }
+        .box:hover img {
+            /* width: 150%; */
+            /* scale(数字) 数字>1----放大  数字<1------缩放*/
+            /* transform: scale(1.2); */
+            transform: scale(0.8);
+        }
+    </style>
+</head>
+<body>
+    <!--  
+        缩放
+            目标:使用scale改变元素的尺寸
+            思考:改变元素的width和height属性能实现吗？
+            语法:
+                transform:scale(x轴缩放倍数,y轴缩放的倍数)
+            技巧:
+                一般情况下，只为scale设置一个值，表示x轴和y轴等比例缩放
+                transform:scale(缩放的倍数);
+    -->
+    <div class="box">
+        <img src="./images/product.jpeg" alt="">
+    </div>
+</body>
+</html>

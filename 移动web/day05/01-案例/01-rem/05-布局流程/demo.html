@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem开发流程</title>
+    <link rel="stylesheet" href="./demo.css">
+</head>
+
+<body>
+    <!--  
+        rem适配原理
+        目标:实现在不同宽度的设备中,网页元素尺寸等比缩放效果
+        思考:
+            工作中,书写代码的尺寸要参考设计稿尺寸,设计稿中是px还是rem?
+            px
+            如何确定rem的数值?
+    -->
+    <!-- 
+        目标:计算68px是多少个rem?(假定设计稿适配375px视口)
+        N*37.5=68----N=68/37.5
+        rem单位尺寸
+        1、确定设计稿对应的设备的HTML标签字号
+            查看设计稿宽度--确定参考设备宽度(视口宽度)--确定基准根字号(1/10视口宽度)
+        2、rem单位的尺寸
+            rem单位的尺寸=px单位像素/基准根字号
+    -->
+    <div class="box"></div>
+    <script src="../js/flexible.js"></script>
+    
+</body>
+
+</html>

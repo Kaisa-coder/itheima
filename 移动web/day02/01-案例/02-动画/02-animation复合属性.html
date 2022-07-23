@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation复合属性</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* 匀速动画 */
+            /* animation: change 1s linear; */
+            /* 分步动画 */
+            /*  3:重复3次播放 */
+            /* animation: change 1s steps(3) 1s 3; */
+            /* 无限循环 */
+            /* animation: change 1s infinite ; */
+            /* 反向执行 */
+            animation: change 1s infinite alternate;
+            /* 执行完毕时状态 需去掉重复次数和动画方向 否则会出错 */
+            /* backwards(默认)动画停留在最初的状态 */
+            /* animation: change 1s backwards; */
+            /* 动画停留在结束的状态 */
+            animation: change 1s forwards;
+        }
+
+        @keyframes change {
+            from {
+                width: 200px;
+            }
+
+            to {
+                width: 600px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--  
+        动画属性
+            目标:使用animation相关属性控制动画执行过程
+            animation:动画名称 动画时长 速度曲线(加速/减速/匀速) 延迟时间 重复次数 动画方向 执行完毕时状态;
+        注意:
+            动画名称和动画时长必须赋值
+            取值不分先后顺序
+            如果有2个时间值，第一个时间表示动画时长，第二个时间表示延迟时间
+    -->
+    <div class="box"></div>
+</body>
+
+</html>

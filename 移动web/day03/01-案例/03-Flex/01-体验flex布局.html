@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体验flex布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            display: flex;
+            justify-content: space-between;
+            /* height: 200px; */
+            border: 1px solid #000;
+        }
+
+        .box div {
+            /* float: left;
+            margin: 10px; */
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  
+        Flex布局
+        目标:能够使用Flex布局模型灵活、快速的开发网页
+        思考:多个盒子横向排列使用什么属性?
+            浮动
+            设置盒子间的间距使用什么属性?
+            margin
+            需要注意什么问题?
+            浮动的盒子脱标
+
+    -->
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>

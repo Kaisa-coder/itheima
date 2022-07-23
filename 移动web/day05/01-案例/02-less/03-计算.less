@@ -1,0 +1,22 @@
+// 目标:使用Less运算写法完成px单位到rem单位的转换
+// 运算:
+//     加、减、乘直接书写计算表达式
+//     除法需要添加小括号或者.
+// 注意:
+// eg:
+// .box {
+//     width: 100+50px;
+//     height: 5*32px;
+//     width: (100/4px);
+//     height: 100./4px;
+// }
+.box {
+    width: 100+10px;
+    width: 100-20px;
+    width: 100*2px;
+    // 除法
+    // 68  >rem
+    width: (68/37.5rem);
+    height: 29./37.5rem;
+    height: 29 /37.5rem;
+}

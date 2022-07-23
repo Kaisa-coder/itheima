@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem基本使用</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 1rem=1html标签字号大小 */
+        html {
+            font-size: 20px;
+        }
+
+        .box {
+            width: 5rem;
+            height: 3rem;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  
+        rem
+        目标:能够使用rem单位设置网页元素的尺寸
+        网页效果
+            屏幕宽度不同,网页元素尺寸不同(等比缩放)
+        px单位或百分比布局可以实现吗?
+            px单位是绝对单位
+            百分比布局特点是宽度自适应,高度固定
+        适配方案
+            rem
+            vw/vh
+        rem单位
+            相对单位
+            rem单位是相对于月HTML标签的字号计算结果
+            1rem=1HTML字号大小
+    -->
+    <!--  
+        网页的根是HTML标签 HTML标签的字号也称根标签字号或根字号
+    -->
+    <div class="box"></div>
+</body>
+
+</html>

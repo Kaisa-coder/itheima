@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置大背景图时:html和body都需要设height:100%;  */
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: url(./../images/f1_1.jpg) no-repeat center 0;
+    /*  缩放背景图 */
+    /* background-size: contain; */
+    /* 图片等比例缩放 当宽度或高度和盒子尺寸相等，图片不再缩放 */
+    /* background-size:cover; */
+    /* 图片等比例缩放,图片完全覆盖到整个盒子,可能导致图片显示不全 */
+    background-size: cover;
+}
+
+/*  
+1、img引入图片，控制位置
+2、定义动画，使用动画
+*/
+.cloud img {
+    position: absolute;
+    left: 50%;
+}
+
+.cloud img:nth-child(1) {
+    margin-left: -300px;
+    top: 20px;
+    animation: cloud 1s infinite alternate linear;
+}
+
+.cloud img:nth-child(2) {
+    margin-left: 400px;
+    top: 100px;
+    animation: cloud 1s infinite alternate linear.2s;
+
+}
+
+.cloud img:nth-child(3) {
+    margin-left: -550px;
+    top: 200px;
+    animation: cloud 1s infinite alternate linear .4s;
+}
+
+/* 云彩动画 */
+@keyframes cloud {
+    to {
+        transform: translateX(20px);
+    }
+}
+
+/* 标签 */
+.brand img {
+    position: absolute;
+    left: 0;
+    top: 770px;
+    width: 110px;
+}
+
+.brand img:nth-child(1) {
+    margin-left: 580px;
+    animation: brand 1s infinite alternate .2s;
+
+}
+
+.brand img:nth-child(2) {
+    margin-left: 790px;
+    animation: brand 1s infinite alternate .4s; 
+}
+
+.brand img:nth-child(3) {
+    margin-left: 1000px;
+    animation: brand 1s infinite alternate .6s;
+}
+
+.brand img:nth-child(4) {
+    margin-left: 1200px;
+    animation: brand 1s infinite alternate .8s;
+}
+
+/* 标签动画 */
+@keyframes brand {
+    to {
+        transform: translateY(-20px);
+    }
+}
+/* 气球图片 */
+.balloon img {
+    position: absolute;
+    left: 605px;
+    top: 170px;
+    width: 5%;
+    animation: balloon 1s infinite alternate linear .4s;
+}
+/* 气球动画 */
+@keyframes balloon {
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+.lu img {
+    position: absolute;
+    left: 1100px;
+    top: 200px;
+}
+
+/* 文字图片 */
+.word img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -330px;
+    margin-top: -140px;
+}
+/* 文字动画 */
+@keyframes word {
+    
+}

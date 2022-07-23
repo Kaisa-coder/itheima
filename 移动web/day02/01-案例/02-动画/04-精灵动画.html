@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>精灵动画</title>
+  <style>
+    .box {
+      /* 1680/12:要保证显示区域尺寸和一个精灵小图的尺寸相同 */
+      width: 140px;
+      height: 140px;
+      border: 1px solid #000;
+      background-image: url(./images/bg.png);
+      /* 12:精灵小图的个数 */
+      animation: 
+      move 1s steps(12) infinite,
+      run 1s forwards;
+    }
+
+    @keyframes move {
+      /* from {
+        background-position: 0 0;
+      } */
+
+      to {
+        /* 1680:整个精灵图的宽度 */
+        background-position: -1680px 0;
+      }
+    }
+
+    /* 定义一个盒子移动的画面 800px */
+    @keyframes run {
+      /* 动画的开始状态和盒子的默认样式相同的，可以省略开始状态的代码 */
+      /* from {
+        transform: translateX(0);
+      } */
+
+      to {
+        transform: translateX(800px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--  
+    目标:使用steps实现逐帧动画
+    逐帧动画:帧动画。开发中，一般配合精灵图实现动画效果
+    animation-timing-function:steps(N);
+      将动画过程等分成N份
+    精灵动画制作步骤
+      准备显示区域  
+        设置盒子尺寸是一张小图的尺寸，背景图为当前精灵图
+      定义动画
+        改变背景图的位置(移动的距离就是精灵图的宽度)
+      使用动画
+        添加速度曲线steps(N),N与精灵图上小图个数相同
+        添加无限重复效果
+  -->
+  <div class="box"></div>
+</body>
+
+</html>

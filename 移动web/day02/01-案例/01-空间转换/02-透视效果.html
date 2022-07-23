@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>透视效果</title>
+  <style>
+    body {
+      perspective: 1000px;
+      /* perspective: 200px; */
+      /* perspective: 10000px; */
+
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      margin: 100px auto;
+      background-color: pink;
+      transition: all 0.5s;
+    }
+
+    .box:hover {
+      transform: translateZ(200px);
+      /* transform: translateZ(-200px); */
+    }
+  </style>
+</head>
+
+<body>
+  <!--  
+    透视
+      目标；使用perspective属性实现透视效果
+      思考；生活中，同一个物体，观察距离不同，视觉上有什么区别？
+            近大远小，近实远虚
+      思考:默认情况下，为什么无法观察到z轴位移效果？
+          z轴是视线方向，移动效果应该是距离的远或近，电脑屏幕是平面，默认无法观察远近效果
+      属性(添加给父级):
+        perspective:值
+        取值:像素单位数值，数值一般在800~1200
+  -->
+  <div class="box"></div>
+</body>
+
+</html>

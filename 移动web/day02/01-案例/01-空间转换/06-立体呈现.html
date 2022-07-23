@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立体呈现</title>
+    <style>
+        .cube {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            /* background-color: pink; */
+            transition: all 2s;
+            transform-style: preserve-3d;
+        }
+
+        .cube div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+        }
+
+        .front {
+            background-color: orange;
+            transform: translateZ(200px);
+        }
+
+        .back {
+            background-color: green;
+        }
+        .cube:hover {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!--  
+        立体呈现
+            目标:使用transform-style:preserve-3d呈现立体图形
+            思考：使用perspective透视属性能否呈现立体图形？
+            答：不能，perspective只能增加近大远小、近实远虚的视觉效果
+            实现方法；
+                添加transform-style:preserve-3d;
+                使子元素处于真正的3d空间
+                默认值flat,表示子元素处于2D平面内呈现
+    -->
+    <div class="cube">
+        <div class="front">前面</div>
+        <div class="back">后面</div>
+    </div>
+</body>
+
+</html>
