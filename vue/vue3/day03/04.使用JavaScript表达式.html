@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <p>{{number+1}}</p>
+    <p> {{ok? 'True' : 'False'}} </p>
+    <p>{{message.split('').reverse().join('')}}</p>
+    <p :id="'list-'+id">xxx</p>
+    <p>{{user.name}}</p>
+  </div>
+  <script src="./lib/vue-2.6.12.js"></script>
+  <script>
+    const vm = new Vue({
+      el: "#app",
+      data() {
+        return {
+          number: 9,
+          ok: true,
+          message: 'ABC',
+          id: 3,
+          user: {
+            name: 'zs'
+          }
+        }
+      },
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/template-web.js"></script>
+    <script src="./lib/jquery.js"></script>
+</head>
+
+<body>
+    <div id="container"></div>
+</body>
+<!-- 注意:先搭建结构,再填充数据   顺序不能乱 否则会报错 -->
+<!-- 定义模板 -->
+<!-- 模板的HTML结构,必须定义到script中 且type="text/html" -->
+<!-- 结构 -->
+<script type="text/html" id="tpl-user">
+    <h1>{{name}}---{{age}}</h1>
+    <!-- 原文输出 -->
+    {{@ test}}
+    <div>
+        {{if flag==0}}
+        flag的值为0
+        {{else if flag==1}}
+        flag的值为1
+        {{/if}}
+    </div>
+    <ul>
+        {{each hobby}}
+        <li>索引是:{{$index}},循环项是{{$value}}</li>
+        {{/each}}
+    </ul>
+    <h3>{{regTime | dataFormat}}</h3>
+</script>
+<!-- 数据 -->
+<script type="text/javascript">
+  
+    var data = {
+        name: 'zs',
+        age: 20,
+        test: '<h3>测试原文输出</h3>',
+        flag: 1,
+        hobby: ['吃饭', '睡觉', '写代码'],
+        regTime: new Date()
+    }
+    var htmlStr = template('tpl-user', data);
+    // 渲染HTML结构
+    $('#container').html(htmlStr);
+</script>
+
+</html>

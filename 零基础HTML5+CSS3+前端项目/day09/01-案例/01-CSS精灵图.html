@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 18px;
+            height: 24px;
+            background-color: pink;
+            background-image: url(./images/taobao.png);
+            /* 背景图位置属性:改变背景图的位置 */
+            /* 水平方向的位置  垂直方向的位置 */
+            /* 想要向左侧移动图片，位置取负数 */
+            /* 想要向上移动图片，位置取负数 */
+            background-position: -3px 0 ;
+        }
+        b {
+            display: block;
+            width: 25px;
+            height: 21px;
+            background-image: url(./images/taobao.png);
+            background-position: 0 -90px;
+        }
+    </style>
+</head>
+<body>
+    <!--  
+        精灵图
+            场景：项目中将多张小图片，合成一张大图片，这张大图片称之为精灵图
+            优点：减少服务器发送的次数，减轻服务器的压力，提高页面的加载速度
+        精灵图的使用步骤:
+            1、创建一个盒子，设置盒子的尺寸和小图尺寸相同
+            2、将精灵图设置为盒子的背景图片
+            3、修改背景图位置
+                通过PxCook测量小图片左上角坐标，分别取负值给盒子的background-position:x y
+    -->
+    <!-- <img src="./images/taobao.png" alt=""> -->
+    <!-- 精灵图的标签都用行内标签 span,b,i -->
+    <span></span>
+    <b></b>
+</body>
+</html>

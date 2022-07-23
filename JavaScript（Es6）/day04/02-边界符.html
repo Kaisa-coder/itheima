@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var rg = /abc/
+    // /abc/只要包含abc这个字符串 则为true
+    console.log(rg.test('abc'));
+    console.log('abcd');
+    console.log(rg.test('aabcd'));
+    console.log('-----------');
+    // 以abc开头
+    var reg = /^abc/
+    console.log(reg.test('abc'));
+    console.log(reg.test('abcd'));
+    console.log(reg.test('aabcd'));
+    console.log('--------------');
+    // 以abc开头&&以abc结尾
+    var reg1 = /^abc$/
+    console.log(reg1.test('abc'));
+    console.log(reg1.test('abcd'));
+    console.log(reg1.test('aabcd'));
+  </script>
+</body>
+
+</html>

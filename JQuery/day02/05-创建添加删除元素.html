@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>原先的li</li>
+    </ul>
+    <div class="text">我是原先的div</div>
+</body>
+<script>
+    $(function () {
+        // 创建元素
+        var li = $("<li>我是后面创建的</li>");
+        // 添加元素
+        // 内部添加 放在最后面
+        // $("ul").append(li);  放在最后面
+        $("ul").prepend(li);    //放在最前面
+        // 外部添加
+        var div = $("<div>我是后妈生的</div>");
+        // $(".text").after(div);
+        $(".text").before(div);
+        // 删除元素
+        // $("ul").remove(); 可删除匹配的元素
+        // $("ul").empty(); //可以删除匹配元素里面的子节点
+        $("ul").html("");//可以删除匹配元素里面的子节点
+    })
+</script>
+
+</html>

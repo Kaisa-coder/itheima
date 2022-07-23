@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 偶数 */
+        /* li:nth-child(2n) */
+        /* 奇数 */
+        /* li:nth-child(2n+1) */
+        /* 找到前3个 */
+        /* li:nth-child(-n+3) */
+        /* 4的倍数 */
+        li:nth-child(4n){
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <!--    E:first-child{}         匹配父元素中的第一个子元素，并且是E元素
+            E:last-child{}          匹配父元素中最后一个子元素，并且是E元素
+            E:nth-child(n){}        匹配父元素中第n个子元素，并且是E元素
+            E:nth-last-child(n){}   匹配父元素中倒数第几个子元素，并且是E元素 -->
+    <!-- n的注意点：
+        1、n为0、1、2、3、4、5、6、....
+        2、通常n可以组成常见公式
+            偶数                2n、even
+            奇数                2n+1、2n-1、odd
+            找到前5个           -n+5
+            找到从第5个往后      n+5 -->
+    <ul>
+        <li>这是第1个li</li>
+        <li>这是第2个li</li>
+        <li>这是第3个li</li>
+        <li>这是第4个li</li>
+        <li>这是第5个li</li>
+        <li>这是第6个li</li>
+        <li>这是第7个li</li>
+        <li>这是第8个li</li>
+    </ul>
+</body>
+
+</html>

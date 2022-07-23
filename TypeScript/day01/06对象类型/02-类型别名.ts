@@ -1,0 +1,5 @@
+// let arr :(number|string)[]=[1,2,3,'a','b']
+// let arr1 :(number|string)[]=[1,2,3,'a','b']
+type CustomArray=(number|string)[]
+let arr:CustomArray=[1,2,3,'a','b']
+let arr1 :CustomArray=[1,2,3,'a','b'] 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 页面可能有很多定时器,我们经常给定时器加标识符 (起名字)
+    // 延迟时间为毫秒 但是可以省略 如果省略默认是0
+    // setTimeout(function () {
+    // console.log('时间到了');
+    // }, 2000);
+    function callBack() {
+        console.log('爆炸了');
+    }
+    var time1 = setTimeout(callBack, 3000);
+    var time2 = setTimeout(callBack, 5000);
+
+    setTimeout('callBack()', 3000);//不提倡此写法
+</script>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 300px;
+            background-color: pink;
+            background-image: url(./images/1.jpg);
+            background-repeat: no-repeat;
+            /* background-size: 300px; */
+            /* background-size: 50%; */
+            /*如果图的宽或高与盒子尺寸相同了，另一个方向停止缩放----导致盒子可能有留白 */
+            /* background-size: contain; */
+            /* 保证宽或高和盒子尺寸完全相同-----导致图片显示不全 */
+            background-size: cover;
+            /* 工作中，图的比例和盒子的比例都是相同的,contain与cover效果完全相同 */
+        }
+    </style>
+</head>
+
+<body>
+    <!--  
+        背景图片大小
+        作用：设置背景图片的大小
+        语法：background-size:width height;
+        取值：
+            数字+px----简单方便，常用
+            百分比-----相当于当前盒子自身的宽高百分比
+            contain----包含，将背景图片等比例缩放，直到不会超出盒子的最大
+            cover------覆盖，将背景图片等比例缩放，直到刚好填满整个盒子没有空白
+        完整连写：background:color image repeat position/size
+        注意点：
+            background-size和background连写同时设置时，需要注意覆盖问题
+        解决：
+            1、要么单独的样式写连写的下面
+            2、要么单独的样式写在连写的里面
+
+    -->
+    <div class="box"></div>
+</body>
+
+</html>

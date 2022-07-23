@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 普通函数 指向window
+    function fn() {
+      console.log('人生的巅峰');
+      console.log(this);
+    }
+    // fn(); fn.call();
+    // 对象方法 指向 o
+    var o = {
+      sayHi: function () {
+        // console.log('人生的巅峰');
+      }
+    }
+    o.sayHi();
+    // 构造函数 指向 ldh 实例对象 原型对象也指向 原型对象
+    function Star() { }
+    Star.prototype.sing = function () { console.log(this); }
+    var ldh = new Star();
+    ldh.sing()
+      // 绑定事件函数 函数调用者 btn 按钮对象
+      // btn.onclick = function () { }
+      // 定时器函数 window
+      // setInterval(function () {console.log(1); }, 1000)
+      // 立即执行函数  window
+      // (function () {
+      //   console.log('人生的巅峰');
+      // })()
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            overflow: hidden;
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            background-color: pink;
+            text-align: center;
+        }
+        
+        .son {
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            background-color: purple;
+            line-height: 200px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son">son盒子</div>
+    </div>
+</body>
+<script>
+    // dom 事件流 三个阶段
+    // js代码只能执行捕获或冒泡其中一个阶段
+    // onclick和attachEvent(ie)只能得到冒泡阶段
+    // var son = document.querySelector('.son');
+    // // 第三个参数为true,则处于捕获阶段 
+    // son.addEventListener('click', function () {
+    //     alert('son');
+    // }, true)
+    // var father = document.querySelector('.father');
+    // father.addEventListener('click', function () {
+    //     alert('father');
+    // }, true);
+    var son = document.querySelector('.son');
+    // 第三个参数为true,则处于捕获阶段 
+    son.addEventListener('click', function () {
+        alert('son');
+    }, false)
+    var father = document.querySelector('.father');
+    father.addEventListener('click', function () {
+        alert('father');
+    }, false);
+    document.addEventListener('click',function(){
+        alert('document');
+    })
+    /*
+        注意:
+        1、实际开发中我们很少使用事件捕获
+        2、有些事假是没有冒泡的 eg:onblur onfocus onmouseenter onmouseleave 
+        3、事件冒泡有时候会带来麻烦,有时候又会带来帮助 
+     */
+</script>
+
+</html>

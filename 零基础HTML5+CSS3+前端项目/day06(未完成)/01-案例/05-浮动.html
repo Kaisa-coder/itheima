@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            /* 浏览器解析行内块或行内标签的时候，如果标签换行书写会产生一个空格的距离 */
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+        .one {
+            background-color: pink;
+        }
+        .two {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 标准流
+            目标：能够认识标准流的默认排布方式及其特点
+            标准流：又称文档流，是浏览器在渲染显示网页内容时默认采用的一套排版规则，规定了应该以任何方式排列元素
+            常见标准流排版规则：
+                1、块级元素：从上往下，垂直布局，独占一行
+                2、行内元素或行内块元素：从左往右，水平布局，空间不够自动换行 
+    -->
+    
+    <div class="one">one</div>
+    <div class="two">two</div>
+</body>
+</html>

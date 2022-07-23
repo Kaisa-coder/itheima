@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 250px;
+    height: 248px;
+    margin: 100px auto 0;
+    border-right: 1px solid pink;
+    overflow: hidden;
+}
+
+#left,
+#content {
+    float: left;
+}
+
+#left li {
+    background: url(./images/lili.jpg) repeat-x;
+}
+
+#left li a {
+    display: block;
+    width: 48px;
+    height: 27px;
+    border-bottom: 1px solid pink;
+    line-height: 27px;
+    text-align: center;
+    color: black;
+}
+
+#left li a:hover {
+    background-image: url(./images/abg.gif);
+}
+
+#content {
+    border-left: 1px solid pink;
+    border-right: 1px solid pink;
+}
+
+#content img {
+    width: 200px;
+    height: 250px;
+}

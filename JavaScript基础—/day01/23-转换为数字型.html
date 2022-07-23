@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--  
+        注意:parseInt和parseFloat单词的大小写
+        隐式转换是我们在进行算术运算的时候,JS自动转换了数据类型
+    -->
+</body>
+<script>
+    // var age=prompt('请输入您的年龄:');
+    // 1、parseInt(变量) 可以把字符串转换为数字型 得到的是整数
+    // console.log(parseInt(age));
+    console.log(parseInt('3.14'));//3
+    console.log(parseInt('3.94'));//3
+    console.log(parseInt('120px'));//120 会去掉单位
+    console.log(parseInt('rem120px'));//NaN
+    // 2、parseFloat(变量) 可以把字符类型转换为数字型 得到的是小数 浮点数
+    console.log(parseFloat('3.14'));//3.14
+    console.log(parseFloat('3.94'));//3.94
+    console.log(parseFloat('120px'));//120
+    console.log(parseFloat('rem120px'));//NaN
+    //3、利用Number(变量)
+    var str='123';
+    console.log(Number(str));
+    console.log(Number('12'));
+    //4、利用了算术运算- * /    隐式转换
+    console.log('12'-0);//12
+    console.log('123'-'120');
+    console.log('123'*1);
+
+</script>
+
+</html>

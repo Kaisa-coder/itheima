@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            margin: 50px auto;
+            width: 200px;
+            height: 200px; 
+            background-color: pink;
+            /* 一个值:表示四个角是相同的 */
+            border-radius: 10px;
+            /* 四个值：左上  右上  右下  左下-------从左上是顺时针转一圈 */
+            /* border-radius: 10px 20px 40px 80px; */
+            /* border-radius: 10px 40px 80px; */
+            /* border-radius: 10px 80px; */
+        }
+    </style>
+</head>
+<body>
+    <!--
+        边框圆角
+            场景：让盒子四个角变得圆润，增加页面细节，提升用户体验
+            属性名:border-radius
+            常见取值:数字+px、百分比
+            赋值规则；从左上角开始赋值，然后顺时针赋值，没有赋值的看对角
+    -->
+    <div class="box"></div>
+</body>
+</html>

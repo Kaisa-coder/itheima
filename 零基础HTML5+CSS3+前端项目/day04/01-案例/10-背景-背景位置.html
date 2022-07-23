@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            background-image: url(./images/1.jpg);
+            background-repeat: no-repeat;
+            /* background-position: 0 0 ;  水平方向位置  垂直方向位置
+            属性值：
+            1、方位名词
+                水平方向：left  center right
+                垂直方向：top center buttom
+            2、数字+px（坐标）
+                原点（0,0） 盒子的左上角  x轴水平向右  y轴垂直向下
+                操作：将图片左上角与坐标点重合即可*/
+            /* 注意点：
+            方位名词取值和坐标取值可以混用，第一个取值表示水平，第二个取值表示垂直 */
+            /* background-position: right 0; */
+            /* background-position: right bottom; */
+            /* background-position: center center; */
+            /* background-position: center; */
+            /* background-position: 50px 0; */
+            /* background-position: 50px 100px; */
+            /* background-position: -50px  100px; */
+            background-position: -50px -100px;
+            /* 正数：向右向下移动； 负数：向左向上移动 */
+            /* 注意：背景色和背景图只显示在盒子里面 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>文字</div>
+</body>
+
+</html>

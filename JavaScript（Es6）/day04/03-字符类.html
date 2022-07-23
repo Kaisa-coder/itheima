@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 只要包含a、b、c都返回 true
+    var rg = /[abc]/
+    console.log(rg.test('andy'));
+    console.log(rg.test('boby'));
+    console.log(rg.test('color'));
+    console.log(rg.test('red'));
+    console.log('-------------');
+    // 三选一 只能是 a|b|c 才会true
+    var rg1 = /^[abc]$/
+    console.log(rg1.test('aa'));
+    console.log(rg1.test('a'));
+    console.log(rg1.test('b'));
+    console.log(rg1.test('c'));
+    console.log(rg1.test('abc'));
+    console.log('--------------');
+    // 26个字母 多选一为true
+    var rg2 = /^[a-z]$/
+    console.log(rg2.test('a'));
+    console.log(rg2.test('z'));
+    console.log(rg2.test(1));
+    console.log(rg2.test('Z'));
+    console.log('--------------');
+    // 字符组合
+    var rg3 = /^[a-zA-Z0-9_-]$/
+    console.log(rg3.test('a'));
+    console.log(rg3.test('B'));
+    console.log(rg3.test(8));
+    console.log(rg3.test('_'));
+    console.log(rg3.test('!'));
+    console.log('--------------');
+    // [^]取反
+    var rg4 = /^[^a-zA-Z0-9_-]$/
+    console.log(rg4.test('a'));
+    console.log(rg4.test('B'));
+    console.log(rg4.test(8));
+    console.log(rg4.test('_'));
+    console.log(rg4.test('!'));
+  </script>
+</body>
+
+</html>

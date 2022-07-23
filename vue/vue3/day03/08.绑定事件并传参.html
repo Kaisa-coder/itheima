@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=`, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <h3> {{count}} </h3>
+    <button @click="addCount(2,$event)">+2</button>
+  </div>
+</body>
+<script src="./lib//vue-2.6.12.js"></script>
+<script>
+  const vm = new Vue({
+    el: '#app',
+    data() {
+      return {
+        count: 0
+      }
+    },
+    methods: {
+      addCount(step, e) {
+        this.count += step
+        const Bgcolr = e.target.style.backgroundColor
+        e.target.style.backgroundColor = Bgcolr === 'red' ? '' : 'red'
+      }
+    },
+  })
+</script>
+
+</html>

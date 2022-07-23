@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .one {
+            /* margin-bottom: 50px; */
+            margin-bottom: 60px;
+        }
+
+        .two {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--    外边距折叠现象 ①合并现象
+    场景：垂直布局的块级元素，上下的margin会合并
+    结果：最终两者距离为margin的最大值
+    解决方法：避免就好
+            只给其中一个盒子设置margin即可 -->
+    <div class="one">11</div>
+    <div class="two">22</div>
+</body>
+
+</html>

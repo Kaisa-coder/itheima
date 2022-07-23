@@ -1,0 +1,124 @@
+.nav {
+    overflow: hidden;
+}
+/* 列表页专有的css */
+.sk {
+    position:absolute;
+    top: 40px;
+    left: 190px;
+    border-left: 1px solid #c81523;
+    padding: 3px 0 0 14px;
+}
+.sk_list {
+    float: left;
+}
+.sk_list ul li {
+     float: left;
+}
+.sk_list ul li a {
+    display: block;
+    line-height: 47px;
+    padding: 0 30px;       
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;   
+}
+.sk_con {
+    float: left;
+}
+.sk_con ul li {
+    float: left;
+}
+.sk_con ul li a {
+    display: block;
+    font-size: 14px;
+    line-height: 50px;
+    padding: 0 20px;
+}
+.sk_con ul li:last-child a::after{
+    font-family: 'icomoon';
+    content: '\e90e';
+}
+.sk_hd {
+    position: relative;
+    height: 150px;
+    background-color: #ccc;
+}
+.ak {
+    position: absolute;
+    top: 35px;
+    left: 530px;
+    width: 129px;
+    height: 49px;
+    background:url(../upload/图层1.png) no-repeat;
+}
+.sk_hd p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 200px;
+    padding-left: 560px;
+}
+.sk_bd {
+    /* float: left; */
+    position: relative;
+    /* margin-left: 10px; */
+    width: 360px;
+    height: 599px;
+    border: 1px solid transparent;
+    /* background-color: aqua; */
+}
+.sk_bd:hover {
+    border: 1px solid red;
+}
+.bd-1 {
+    height: 455px;
+    /* background-color: pink; */
+}
+.bd-1 ul li {
+    position: absolute;
+    top: 60px;
+    left: 96px;
+}
+.bd-1 i {
+    position: absolute;
+    left: 15px;
+    top: 410px;
+}
+.bd-2-1 {
+    height: 80px;
+}
+.bd-2-1 h3 {
+    padding-top: 20px;
+    padding-left: 15px;
+}
+.bd-2-1 s {
+    font-size: 14px;
+    font-weight: 400;
+}
+.bd-2-1 p {
+    float: left;
+    padding-left: 15px;
+}
+.bd-2-1 .c {
+    float: left;
+    width: 165px;
+    height: 15px;
+    border: 1px solid red;
+    background-color: red;
+    border-radius: 15px;
+    margin-left: 15px;
+    margin-top: 2px;
+}
+.bd-2-2 {
+    height: 62px;
+    background-color: #c81523;
+    color: #fff;
+    line-height: 62px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+} 
+
+
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        使用表单、prompt获取过来的数据默认是字符串类型的,此时就不能直接简单的进行加法运算,而需要转换变量的数据类型。 通俗来说,就是把一种数据类型的变量转换成另外一种数据类型。
+        toString()和String()使用方法不一样
+        三种转换方式,我们更喜欢用第三种加号拼接字符串转换方式,这一种方式也称之为隐式转换。
+     -->
+</body>
+<script>
+    // 1、把数字转换为字符串型 变量.toString()
+    var num = 10;
+    var str = num.toString();
+    console.log(str);
+    console.log(typeof str);
+    // 2、利用String(变量) 强制转换
+    console.log(String(num));
+    // 3、利用+拼接字符串的方法实习转换效果 隐式转换
+    console.log(num + '');
+</script>
+
+</html>

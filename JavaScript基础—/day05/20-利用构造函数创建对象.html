@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<!-- 
+    function 构造函数名(){
+        this.属性=值;
+        this.方法=function(){}
+    }
+    new 构造函数名();
+ -->
+<script>
+
+    function Star(uname, age, sex) {
+        this.uname = uname;
+        this.age = age;
+        this.sex = sex;
+        this.sing = function (song) {
+            console.log(song);
+        }
+    }
+    var ldh = new Star('刘德华', 18, '男');
+    console.log(typeof ldh);
+    console.log(ldh.uname);
+    console.log(ldh['sex']);
+    ldh.sing('冰雨');
+    var zxy = new Star('张学友', 19, '男');
+    console.log(zxy.uname);
+    console.log(zxy.age);
+    zxy.sing('李香兰');
+    // 1、构造函数名字首字母要大写
+    // 2、构造函数不需要return就可以返回结果
+    // 3、调用构造函数必须使用new
+    // 4、只要new Star() 调用函数就创建了一个对象
+    // 5、属性和方法之前必须添加this
+
+
+    // 案例
+    function Hero(uname, type, blood, attack) {
+        this.uname = uname;
+        this.type = type;
+        this.blood = blood;
+        this.attack = attack;
+    }
+    var lianpo = new Hero('廉颇', '力量型', 500, '近战');
+    console.log(lianpo.uname);
+    console.log(lianpo.type);
+    var houyi = new Hero('后羿', '射手型', 100, '远程');
+    console.log(houyi.uname);
+    console.log(houyi.type);
+</script>
+
+</html>

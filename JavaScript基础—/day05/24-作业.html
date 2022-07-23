@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var Computer = {
+        color: 'pink',
+        weight: '2.5kg',
+        type: 'win10',
+        fn: function () {
+            console.log('看电影,听音乐,打游戏,敲代码');
+        }
+    }
+    console.log(Computer.color);
+    Computer.fn();
+    function Button(width, height, bgcolor) {
+        this.width = width;
+        this.height = height;
+        this.bgcolor = bgcolor;
+        this.but = function (doing) {
+            console.log(doing);
+        }
+    }
+    var swit1 = new Button('50px', '30px', 'pink');
+    var swit2 = new Button('20px', '90px', 'black');
+    console.log(swit1.bgcolor);
+    console.log(swit2.width);
+    swit1.but('点击行为');
+    swit2.but('点点滴滴');
+    var Car = new Object();
+    Car.weight = '1t';
+    Car.color = 'black';
+    Car.logo = '奔驰';
+    Car.user = function (done) {
+        console.log(done);
+    }
+    console.log(Car.weight);
+    console.log(Car.color);
+    console.log(Car.logo);
+</script>
+
+</html>

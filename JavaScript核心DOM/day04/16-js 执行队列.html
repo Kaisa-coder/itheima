@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 异步任务: JS的异步是通过回调函数实现的
+    // 一般分为三种类型:
+    // 1、普通事件 click resize
+    // 2、资源加载 load error
+    // 3、定时器 setInterval setTimeout
+    // 第一个问题
+    // console.log(1);
+    // setTimeout(function () {
+    //     console.log(3);
+    // }, 1000);
+    // console.log(2);
+    // 第二个问题
+    // console.log(1);
+    // setTimeout(function () {
+    //     console.log(3);
+    // }, 0);
+    // console.log(2);
+    // 第三个问题
+    console.log(1);
+    document.onclick = function () {
+        console.log('click');
+    }
+    console.log(2);
+    setTimeout(function () {
+        console.log(3);
+    }, 3000)
+</script>
+
+</html>

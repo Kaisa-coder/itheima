@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var todolist = [
+        {
+            title: "",
+            done: false
+        },
+        {
+            title: "",
+            done: false
+        }
+    ];
+    // localStorage.setItem("todo",todolist);
+    // 本地存储只能放字符串的数据类型 把数组对象转换为字符串类型 JSON.stringify()
+    localStorage.setItem("todo", JSON.stringify(todolist));
+    var data = localStorage.getItem("todo");
+    // console.log(typeof data);
+    // console.log(data[0].title);
+    // 获取本地存储的数据 我们需要把里面的字符串数据类型转换为原先的对象类型 JSON.parse()
+    data = JSON.parse(data);
+    console.log(data);
+    console.log(data[0].title);
+
+</script>
+
+</html>

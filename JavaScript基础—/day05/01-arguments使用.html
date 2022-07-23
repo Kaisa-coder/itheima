@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--  
+    arguments的使用 (只有函数才有arguments对象)
+    当我们不确定有多少个参数传递的时候,可以用arguments来获取。在JavaScript中,arguments实际上它是当前函数的一个内置对象。所有函数都内置了一个arguments对象,arguments对象中存储了传递的所有实参。
+    arguments展示形式是一个伪数组,因此可以进行遍历。
+    伪数组具有以下特点:
+        具有length属性
+        按索引方式储存数据
+        不具有数组push(),pop()等方法
+-->
+</body>
+<script>
+    function fn() {
+        console.log(arguments);//里面存储了所有传递过来的实参
+        console.log(arguments.length);
+        console.log(arguments[2]);
+        for (var i = 0; i < arguments.length; i++) {
+            console.log(arguments[i]);
+        }
+    }
+    fn(1, 2, 3);
+    fn(1, 2, 3, 4, 5)
+    //伪数组 并不是真正意义上的数组
+</script>
+
+</html>
